@@ -1,0 +1,27 @@
+{
+  "name": "api-email",
+  "version": "1.0.0",
+  "description": "Api para disparo de email, projeto página HTML.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbombonate/api-email.git"
+  },
+  "keywords": [
+    "email",
+    "express",
+    "api"
+  ],
+  "author": "Daniel Bombonate",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dbombonate/api-email/issues"
+  },
+  "homepage": "https://github.com/dbombonate/api-email#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
