@@ -5,7 +5,7 @@ const mailController = require('../Controllers/index');
 //const filialController = require('../Controller/filialController');
 //const produtoController = require('../Controller/produtoController');
 
-routes.get('/', mailController.envia);
-routes.post('/email', mailController.envia);
+routes.get('/', mailController.getRoute);
+routes.post('/email', mailController.enviaMail);
 
 module.exports = routes;
