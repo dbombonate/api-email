@@ -1,13 +1,14 @@
+require('dotenv').config();
 const nodemailer = require('nodemailer');
 
 const remetente = nodemailer.createTransport({
-    host: 'smtp.kinghost.net',
-    service: 'smtp.kinghost.net',
+    host: process.env.SERVICE,
+    service: process.env.SERVICE,
     port: 587,
     secure: false,
     auth: {
-        user: 'contato@depsystems.com.br',
-        pass: 'dcb!2012'
+        user: process.env.USER,
+        pass: process.env.PASS
     }
 });
 
