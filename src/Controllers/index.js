@@ -1,6 +1,5 @@
 const nodemailer = require('nodemailer');
 const remetente = require('../Mail/config');
-//import { mailFrom, mailTo } from '../Mail/recipients';
 const { mailTo, mailFrom } = require('../Mail/recipients');
 
 class MailController {
