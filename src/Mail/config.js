@@ -5,10 +5,12 @@ const remetente = nodemailer.createTransport({
     host: process.env.SERVICE,
     service: process.env.SERVICE,
     port: 587,
-    secure: false,
     auth: {
         user: process.env.USER,
         pass: process.env.PASS
+    },
+    tls: {
+        ciphers: 'SSLv3'
     }
 });
 
