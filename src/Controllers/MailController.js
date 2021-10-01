@@ -6,8 +6,8 @@ class MailController {
 
   enviaMail(req, res) {
 
-    const { name, phone, cpf, anonimationType } = req.body;
-    if (!name || !phone || !cpf || !anonimationType) return res.status(400).send({
+    const { name, phone, cpf, anonimationJustify } = req.body;
+    if (!name || !phone || !cpf || !anonimationJustify) return res.status(400).send({
       message: 'Verifique os dados enviados'
     });
   
@@ -15,8 +15,14 @@ class MailController {
       from: mailFrom,
       to: mailTo,
       subject: 'Anonimização de cliente',
-      text: `Olá, estamos notificando que o cliente ${name}, portador do CPF ${cpf} solicitou 
-      a exclusão de seus dados da base de dados do Santo Supermercados.`
+      text: `
+      Olá, estamos notificando que o cliente ${name}, portador do CPF ${cpf} solicitou 
+      a exclusão de seus dados da base de dados do Santo Supermercados.
+
+      Justificativa: ${anonimationJustify}
+
+      Providenciar a exclusão de seus dados de todos os sistemas que possuem seu cadastro.
+      `
     };
 
     remetente.sendMail(emailASerEnviado, function (error) {
@@ -32,7 +38,7 @@ class MailController {
 
   getRoute(req, res) {
     return res.send({
-      message: 'API Santo Supermercados LGPD'
+      message: 'API email anonimização LGPD'
     });
   }
 
