@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Api Email" />
+  <!--<img src="./.github/app.gif" alt="Api Email" />-->
 
   &#xa0;
 
@@ -33,62 +33,77 @@
 <hr> -->
 
 <p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/dbombonate" target="_blank">Author</a>
+  <a href="#dart-about">Sobre</a> &#xa0; | &#xa0; 
+  <!--<a href="#sparkles-features">Features</a> &#xa0; | &#xa0;-->
+  <a href="#rocket-technologies">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requirements">Requisitos</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-starting">Iniciando..</a> &#xa0; | &#xa0;
+  <a href="#memo-license">Licença</a> &#xa0; | &#xa0;
+  <a href="https://github.com/dbombonate" target="_blank">Autor</a>
 </p>
 
 <br>
 
-<!--## :dart: About ##
+## :dart: Sobre ##
 
-Describe your project
+Projeto de API para envio de email de notificação. Projeto criado originalmente para sanar um problema de preenchimento de formulário de solicitação de anonimização de dados em um cliente.
 
-## :sparkles: Features ##
+A API recebe um JSON contendo dados necessários, e faz a notificação por email para os responsáveis em tomar as devidas precauções.
+
+<!--## :sparkles: Features ##
 
 :heavy_check_mark: Feature 1;\
 :heavy_check_mark: Feature 2;\
 :heavy_check_mark: Feature 3;
+-->
+## :rocket: Tecnologias ##
 
-## :rocket: Technologies ##-->
-
-The following tools were used in this project:
+A seguinte ferramenta foi usada nesse projeto:
 
 - [Node.js](https://nodejs.org/en/)
 
-## :white_check_mark: Requirements ##
+## :white_check_mark: Requisitos ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Antes de iniciar :checkered_flag:, você precisa do [Git](https://git-scm.com) e do [Node](https://nodejs.org/en/) instalados.
 
-## :checkered_flag: Starting ##
+Também é necessário criar um arquivo .env com as variáveis de ambiente a seguir:
+
+MAIL_TO=email de quem vai receber
+MAIL_FROM=email de envio
+
+USER=usuário de email
+PASS=senha do email
+
+SERVICE=serviço que será usado (smtp.xpto.net)
+
+PORT=porta de execução
+
+## :checkered_flag: Iniciando... ##
 
 ```bash
-# Clone this project
+# Clonar o projeto
 $ git clone https://github.com/dbombonate/api-email
 
-# Access
+# Acesso
 $ cd api-email
 
-# Install dependencies
+# Instalar dependencias
 $ npm install
 
-# Run the project
+# Iniciar o projeto
 $ npm start
 
-# The server will initialize in the <http://localhost:3000>
+# O servidor vai iniciar em <http://localhost> na porta 
+# definida na variável de ambiente.
 ```
 
-## :memo: License ##
+## :memo: Licença ##
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+Esse projeto está sob a licença MIT. Para mais detalhes, veja o arquivo [LICENSE](LICENSE.md).
 
 
 Made with :heart: by <a href="https://github.com/dbombonate" target="_blank">Daniel Bombonate</a>
 
 &#xa0;
 
-<a href="#top">Back to top</a>
+<a href="#top">Topo</a>
