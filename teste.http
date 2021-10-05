@@ -1,13 +1,13 @@
-GET http://localhost:3000/
+GET http://localhost:4458/
 
 ###
 
-POST http://localhost:3000/email HTTP/1.1
+POST http://localhost:4458/email HTTP/1.1
 content-type: application/json
 
 {
     "name": "Cesar Pereira",
     "phone": "11994875412",
     "cpf": "12598825478",
-    "anonimationType": 1
+    "anonimationJustify": "Não desejo mais compartilhar meus dados com o LOJISTA."
 }

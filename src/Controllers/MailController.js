@@ -1,17 +1,18 @@
 const nodemailer = require('nodemailer');
 const remetente = require('../Mail/config');
 const { mailTo, mailFrom } = require('../Mail/recipients');
+const logger = require('../Services/winston');
 
 class MailController {
 
-  enviaMail(req, res) {
+  mailSend(req, res) {
 
     const { name, phone, cpf, anonimationJustify } = req.body;
     if (!name || !phone || !cpf || !anonimationJustify) return res.status(400).send({
-      message: 'Verifique os dados enviados'
+      message: 'Verifique os dados informados'
     });
   
-    const emailASerEnviado = {
+    const mailToSend = {
       from: mailFrom,
       to: mailTo,
       subject: 'Anonimização de cliente',
@@ -25,10 +26,12 @@ class MailController {
       `
     };
 
-    remetente.sendMail(emailASerEnviado, function (error) {
+    remetente.sendMail(mailToSend, function (error) {
       if (error) {
         console.log(error);
+        logger.error(error);
       } else {
+        logger.info(req.body);
         return res.status(200).send({
           message: 'Sua solicitação foi enviada com sucesso!'
         });
@@ -37,6 +40,7 @@ class MailController {
   }
 
   getRoute(req, res) {
+    logger.info();
     return res.send({
       message: 'API email anonimização LGPD'
     });
